@@ -18,10 +18,6 @@ use App\Http\Controllers\LibraryController;
 
 Route::get('/', [GameController::class,'acceuil'])->name('accueil');
 
-Route::inertia('/inscription', 'Inscription')->name('inscription');
-Route::post('/register', [RegisteredUserController::class, 'store'])->name('register');
-Route::post('/login', [AuthenticatedSessionController::class, 'store'])->name('login');
-
 
 Route::inertia('/listeSouhaits', 'ListeSouhaits');
 Route::inertia('/panier', 'Panier');
@@ -55,10 +51,6 @@ Route::middleware('auth')->get('/bibliotheque', [LibraryController::class, 'inde
     ->name('bibliotheque');
 
 
-
-
-
-
 Route::get('/connexion', function () {
     return Inertia::render('Connexion', [
         'canLogin' => Route::has('login'),
@@ -69,29 +61,12 @@ Route::get('/connexion', function () {
 })->name('connexion');
 
 
-
 Route::middleware('auth')->group(function () {
     Route::get('/profil-parametres', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
-Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])
-    ->middleware('guest')
-    ->name('password.request');
-
-Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])
-    ->middleware('guest')
-    ->name('password.email');
-
-Route::get('/reset-password/{token}', [NewPasswordController::class, 'create'])
-    ->middleware('guest')
-    ->name('password.reset');
-
-Route::post('/reset-password', [NewPasswordController::class, 'store'])
-    ->middleware('guest')
-    ->name('password.update');
 
 
     Route::post('/wishlist', [WishlistController::class, 'store'])
@@ -139,34 +114,6 @@ Route::post('/reset-password', [NewPasswordController::class, 'store'])
         Route::get('/finaliser-commande/annuler', [CheckoutController::class, 'cancel'])
             ->name('checkout.cancel');
     });
-
-Route::middleware('guest')->group(function () {
-
-    Route::inertia('/inscription', 'Inscription')
-        ->name('inscription');
-
-    Route::post('/register', [RegisteredUserController::class, 'store'])
-        ->name('register');
-
-    Route::get('/connexion', function () {
-        return Inertia::render('Connexion', [
-            'canLogin' => Route::has('login'),
-            'canRegister' => Route::has('register'),
-        ]);
-    })->name('connexion');
-
-    Route::post('/login', [AuthenticatedSessionController::class, 'store'])
-        ->name('login');
-
-    Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])
-        ->name('password.request');
-
-    Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])
-        ->name('password.email');
-
-});
-
-
 
 
 

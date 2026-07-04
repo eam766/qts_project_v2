@@ -1,0 +1,59 @@
+.search-form {
+    background-image: url("../../assets/img/Barre_de_Recherche3.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 43px;
+    position: relative;
+    padding-right: 8px; /* ← ajout */
+    box-sizing: border-box; /* ← important pour que le padding ne déborde pas */
+}
+
+.p-autocomplete {
+    flex: 1;
+    height: 100%;
+}
+
+.p-autocomplete-input {
+    background-color: transparent;
+    background-image: none; /* ← retirer l'image ici */
+    border: 0 none;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.p-autocomplete-items-wrapper {
+    overflow: auto !important;
+    scrollbar-width: none;
+    font-family: "Audiowide", serif;
+}
+.p-autocomplete-item {
+    background-color: #2e3f3e;
+}
+
+.game-suggestions {
+    min-width: 600px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-top: solid #02d7f2 1px;
+}
+.p-highlight {
+    background-color: #02d7f2;
+}
+.game-suggestions:hover {
+    background-color: #02d7f2;
+}
+
+.search-icon-btn {
+    width: 36px !important;
+    height: 36px !important;
+    min-width: 36px !important;
+    padding: 0 !important;
+    flex-shrink: 0;
+}

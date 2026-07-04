@@ -1,0 +1,114 @@
+.buttonSupression {
+    position: relative;
+
+    background-image: url("../assets/img/Bouton_Inscription.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    width: 203px;
+
+    margin: 0 auto;
+    overflow: hidden;
+
+    text-decoration: none;
+}
+
+/* image hover */
+.buttonSupression::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../assets/img/Bouton_Inscription_Hover.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    z-index: 0;
+}
+
+.buttonSupression:hover::before {
+    opacity: 1;
+}
+
+/* texte */
+.buttonSupression span {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+/* hover texte */
+.buttonSupression:hover span {
+    color: black;
+}
+
+/*Bouton Paiement*/
+
+.buttonPaiment {
+    position: relative;
+
+    background-image: url("../assets/img/Bouton_Inscription.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 55px;
+    width: 235px;
+
+    margin: 0;
+    overflow: hidden;
+
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* image hover */
+.buttonPaiment::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../assets/img/Bouton_Inscription_Hover.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    z-index: 0;
+}
+
+.buttonPaiment:hover::before {
+    opacity: 1;
+}
+
+/* texte */
+.buttonPaiment span {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+/* hover texte */
+.buttonPaiment:hover span {
+    color: black;
+}

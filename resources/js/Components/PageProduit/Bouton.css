@@ -1,0 +1,66 @@
+.buttonAdd {
+    position: relative;
+    background-image: url("../../assets/img/Bouton_Ajouter.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.buttonAdd::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("../../assets/img/Bouton_Ajouter_Hover.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.buttonAdd:hover::before {
+    opacity: 1;
+}
+
+.buttonAdd span {
+    position: relative;
+    z-index: 2;
+    color: #02d7f2;
+    transition: color 0.3s ease;
+}
+
+.buttonAdd:hover .buttonAddIcon,
+.buttonAdd:hover span {
+    color: black;
+}
+
+.buttonAddIcon {
+    position: relative;
+    z-index: 2;
+    color: #02d7f2;
+    transition: color 0.3s ease;
+}
+
+.inCartIcon {
+    color: #eab308;
+}
+
+.buttonAdd:hover .inCartIcon {
+    color: #eab308;
+}
+
+.inListIcon {
+    color: #f44336;
+}
+
+.buttonAdd:hover .inListIcon {
+    color: #f44336;
+}

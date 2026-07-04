@@ -1,0 +1,38 @@
+.liste-jeux {
+    max-width: 1300px;
+    margin: auto;
+}
+
+.jeux-cover {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    margin: 0 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.jeux-cover:hover {
+    border-bottom: 2px solid #02d7f2;
+}
+
+.jeu-titre-prix {
+    display: flex;
+    flex-direction: column;
+    margin-left: 4px;
+}
+
+.text-titre {
+    width: 200px;
+    white-space: normal;
+    overflow-wrap: break-word;
+
+    &:first-child {
+        color: #02d7f2;
+    }
+}
+
+.carousel-no-nav .p-carousel-prev,
+.carousel-no-nav .p-carousel-next {
+    visibility: hidden;
+}

@@ -60,6 +60,8 @@ Route::get('/connexion', function () {
     ]);
 })->name('connexion');
 
+Route::inertia('/inscription', 'Inscription')->name('inscription');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profil-parametres', [ProfileController::class, 'edit'])->name('profile.edit');

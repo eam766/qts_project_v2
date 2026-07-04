@@ -13,4 +13,4 @@ php artisan route:cache
 php artisan view:cache
 
 # Démarre le serveur sur le port fourni par Render
-php artisan serve --host=0.0.0.0 --port=${PORT:-10000}ok. 
+php artisan serve --host=0.0.0.0 --port=${PORT:-10000}

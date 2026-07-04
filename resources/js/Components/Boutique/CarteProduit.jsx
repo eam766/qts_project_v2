@@ -40,7 +40,14 @@ export default function CarteProduit({ index, game }) {
                         />
                         <h1
                             className="text-xl font-bold"
-                            style={{ color: color }}
+                            style={{
+                                color: color,
+                                display: "-webkit-box",
+                                WebkitLineClamp: 2,
+                                WebkitBoxOrient: "vertical",
+                                overflow: "hidden",
+                                minHeight: "3.2rem",
+                            }}
                         >
                             {game.name}
                         </h1>

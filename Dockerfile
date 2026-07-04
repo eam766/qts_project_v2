@@ -27,7 +27,7 @@ COPY . .
 COPY --from=node_build /app/public/build ./public/build
 
 # Installer les dépendances PHP (production, sans dev)
-RUN composer install --no-dev --optimize-autoloader --no-interaction
+RUN composer install --optimize-autoloader --no-interaction
 
 # Créer le fichier SQLite s'il n'existe pas + permissions
 RUN mkdir -p database && touch database/database.sqlite \

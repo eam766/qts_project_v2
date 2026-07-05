@@ -23,7 +23,7 @@ class DemoUserSeeder extends Seeder
                 'dateOfBirth' => '1995-06-15',
                 'infolettre' => true,
                 'termsCondition' => true,
-                'image' => null,
+                'image' => url('/images/demo-avatar.jpg'),
                 'description' => 'Compte de démonstration.',
                 'email_verified_at' => now(),
             ]

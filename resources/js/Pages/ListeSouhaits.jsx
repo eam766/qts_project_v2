@@ -12,7 +12,9 @@ export default function ListeSouhait() {
 
     const [wishlist, setWishlist] = useState(wishlistGames || []);
     const [cart, setCart] = useState(cartGames || []);
-    const [showEmptyMessage, setShowEmptyMessage] = useState(false);
+    const [showEmptyMessage, setShowEmptyMessage] = useState(
+        (wishlistGames || []).length === 0,
+    );
     const [removingGameId, setRemovingGameId] = useState(null);
     const [confirmDelete, setConfirmDelete] = useState(null);
 
@@ -129,7 +131,7 @@ export default function ListeSouhait() {
                               exit={{ opacity: 0 }}
                               transition={{ duration: 0.3 }}
                           >
-                              Aucun jeu dans la liste de souhaits.
+                              Votre liste de souhaits est vide.
                           </motion.p>
                       )
                     : wishlist.map((game) => (

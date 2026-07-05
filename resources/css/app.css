@@ -190,3 +190,14 @@
         display: none !important;
     }
 }
+
+#nprogress .bar {
+    background-color: #02d7f2 !important;
+    height: 4px !important;
+}
+
+#nprogress .peg {
+    box-shadow:
+        0 0 10px #02d7f2,
+        0 0 5px #02d7f2 !important;
+}

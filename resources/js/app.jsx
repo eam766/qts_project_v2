@@ -13,7 +13,7 @@ createInertiaApp({
     resolve: (name) =>
         resolvePageComponent(
             `./Pages/${name}.jsx`,
-            import.meta.glob("./Pages/**/*.jsx")
+            import.meta.glob("./Pages/**/*.jsx"),
         ).then((module) => {
             const Page = module.default;
             Page.layout = Page.layout || ((page) => <Layout children={page} />);
@@ -25,6 +25,6 @@ createInertiaApp({
         root.render(<App {...props} />);
     },
     progress: {
-        color: "#4B5563",
+        color: "#02D7F2",
     },
 });
